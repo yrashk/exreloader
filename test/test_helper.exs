@@ -1,2 +1,1 @@
-ExReloader.start
 ExUnit.start
