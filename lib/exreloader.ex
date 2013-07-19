@@ -86,7 +86,7 @@ defmodule ExReloader.Server do
         {:ok, File.Stat[mtime: mtime]} when mtime >= from and mtime < to ->
            ExReloader.reload(module)
         {:ok, _} -> :unmodified
-        {:error, enoent} -> :gone
+        {:error, :enoent} -> :gone
         other -> other
       end
     end
